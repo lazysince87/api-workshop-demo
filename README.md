@@ -16,4 +16,5 @@ Welcome! Follow these steps to spin up the demo.
 1. Open your terminal in this folder.
 2. Run `npm install` to get the tools.
 3. Run `node server.js` to start the server.
-4. Visit `http://localhost:3000/api-docs` to see Swagger UI!
+4. Visit `http://localhost:3000` to see Google Maps API!
+5. Visit `http://localhost:3000/api-docs` to see Swagger UI!
