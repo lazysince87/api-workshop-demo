@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SASE Workshop: Google Maps API</title>
+    <style>
+      #map { height: 500px; width: 100%; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+      body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 40px; background-color: #f8f9fa; }
+      h1 { color: #2c3e50; }
+    </style>
+  </head>
+  <body>
+    <h1>SASE Workshop: Google Maps API Demo</h1>
+    <p>The map below is being loaded via an API call using the key in your <code>.env</code> file.</p>
+    <div id="map"></div>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key={GOOGLE_MAP_KEY}&callback=initMap" async defer></script>
+    
+    <script>
+      function initMap() {
+        const uf = { lat: 29.6436, lng: -82.3549 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: uf,
+        });
+        new google.maps.Marker({ position: uf, map: map, title: "University of Florida" });
+      }
+    </script>
+  </body>
+</html>
