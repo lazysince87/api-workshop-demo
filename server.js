@@ -24,6 +24,14 @@ app.get('/', (req, res) => {
     }
 });
 
+app.get('/hello', (req, res) => {
+    res.json({
+        message: "Hello from the SASE Workshop!",
+        status: "Success",
+        timestamp: new Date().toISOString()
+    });
+});
+
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.listen(PORT, () => {
